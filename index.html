@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nilofur 🎂</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#5e2b97,#8a4fff,#c084fc);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:white;
+}
+
+.container{
+    text-align:center;
+    padding:50px 20px;
+}
+
+h1{
+    font-size:4rem;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff;
+    }
+    to{
+        text-shadow:0 0 30px #fff,0 0 50px #d8b4fe;
+    }
+}
+
+.nickname{
+    font-size:1.8rem;
+    margin-top:10px;
+    color:#f5d0fe;
+}
+
+.card{
+    max-width:850px;
+    margin:40px auto;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.message{
+    font-size:1.3rem;
+    line-height:1.8;
+}
+
+.memories{
+    margin-top:30px;
+}
+
+.memories h2{
+    margin-bottom:15px;
+}
+
+.memory{
+    background:rgba(255,255,255,0.15);
+    margin:10px;
+    padding:15px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.memory:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:40px;
+    font-size:1.5rem;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:1rem;
+    cursor:pointer;
+    background:white;
+    color:#7c3aed;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.heart{
+    position:fixed;
+    color:#fff;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎉 Happy Birthday Nilofur 🎉</h1>
+<p class="nickname">My Dear Machan 💜</p>
+
+<div class="card">
+
+<p class="message">
+Happy Birthday to the most amazing friend! 💜<br><br>
+
+Dear Nilofur,<br><br>
+
+Thank you for being such an important part of my life.
+From our very first day in college to all the unforgettable memories we've shared,
+every moment has been special.
+
+Whether it was spending time at the roadu kadai,
+talking for hours on late-night calls,
+or simply being there for each other,
+you've made life brighter and happier.
+
+May this year bring you endless happiness,
+success, good health, and everything you've been wishing for.
+
+Keep smiling, keep shining, and keep being the wonderful person you are.
+
+✨ Enjoy your special day, Machan! ✨
+</p>
+
+<div class="memories">
+<h2>💜 Our Favorite Memories 💜</h2>
+
+<div class="memory">🎓 First Day of College</div>
+<div class="memory">🏫 College Days</div>
+<div class="memory">🍜 Roadu Kadai Moments</div>
+<div class="memory">📞 Late-Night Calls</div>
+
+</div>
+
+<button onclick="showWish()">Click for a Surprise 🎁</button>
+
+</div>
+
+<div class="footer">
+Made with 💜 by Surya
+</div>
+
+</div>
+
+<script>
+function showWish(){
+    alert("🎂 Happy Birthday Nilofur! 💜\nYou are truly one of a kind. Have an amazing year ahead! ✨");
+}
+
+function createHeart(){
+    const heart=document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML='💜';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(Math.random()*25+15)+'px';
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
