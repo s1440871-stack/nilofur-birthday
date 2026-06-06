@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,155 +8,156 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#5b21b6,#7c3aed,#c084fc);
-    color:white;
-    min-height:100vh;
-    overflow-x:hidden;
+background:linear-gradient(135deg,#4c1d95,#7c3aed,#c084fc);
+color:white;
+overflow-x:hidden;
 }
 
 .container{
-    width:90%;
-    max-width:1000px;
-    margin:auto;
-    padding:40px 20px;
-    text-align:center;
+max-width:1000px;
+margin:auto;
+padding:30px;
+text-align:center;
 }
 
-h1{
-    font-size:3.5rem;
-    margin-bottom:10px;
-    animation:glow 2s infinite alternate;
+.hero{
+padding:80px 20px;
 }
 
-.nickname{
-    font-size:1.5rem;
-    color:#f3e8ff;
-    margin-bottom:25px;
+.hero h1{
+font-size:4rem;
+animation:glow 2s infinite alternate;
+}
+
+.hero p{
+font-size:1.4rem;
+margin-top:15px;
+color:#f5d0fe;
 }
 
 @keyframes glow{
-    from{
-        text-shadow:0 0 10px white;
-    }
-    to{
-        text-shadow:0 0 25px white,0 0 40px #d8b4fe;
-    }
+from{
+text-shadow:0 0 10px white;
+}
+to{
+text-shadow:0 0 30px white,0 0 60px #e9d5ff;
+}
 }
 
 .card{
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:25px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.3);
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(12px);
+border-radius:25px;
+padding:35px;
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
 }
 
-.message{
-    font-size:1.2rem;
-    line-height:1.8;
+.slideshow{
+margin-top:30px;
+position:relative;
 }
 
-/* Gallery */
-
-.gallery{
-    margin-top:40px;
+.slide{
+display:none;
+width:100%;
+max-height:550px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
-.gallery h2{
-    margin-bottom:20px;
+.fade{
+animation:fade 1s;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
+@keyframes fade{
+from{opacity:.4}
+to{opacity:1}
 }
 
-.gallery-grid img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:0.4s;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+.letter{
+margin-top:40px;
+line-height:2;
+font-size:1.15rem;
 }
 
-.gallery-grid img:hover{
-    transform:scale(1.05);
-}
-
-/* Memories */
-
-.memories{
-    margin-top:40px;
+.quote{
+margin:25px 0;
+font-size:1.3rem;
+font-style:italic;
+color:#f5d0fe;
 }
 
 .memory{
-    background:rgba(255,255,255,0.15);
-    padding:15px;
-    border-radius:15px;
-    margin:10px 0;
-    transition:0.3s;
+margin-top:40px;
+padding:20px;
+background:rgba(255,255,255,0.1);
+border-radius:20px;
 }
 
-.memory:hover{
-    transform:translateY(-5px);
+.memory h2{
+margin-bottom:15px;
+}
+
+.memory p{
+line-height:1.8;
 }
 
 button{
-    margin-top:30px;
-    padding:15px 35px;
-    border:none;
-    border-radius:50px;
-    font-size:1rem;
-    font-weight:bold;
-    cursor:pointer;
-    background:white;
-    color:#7c3aed;
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:1rem;
+font-weight:bold;
+background:white;
+color:#7c3aed;
 }
 
 button:hover{
-    transform:scale(1.05);
+transform:scale(1.05);
 }
 
 .footer{
-    margin-top:30px;
-    font-size:1.3rem;
+margin:40px 0;
+font-size:1.2rem;
 }
 
 .heart{
-    position:fixed;
-    bottom:-20px;
-    animation:float 6s linear infinite;
-    z-index:999;
+position:fixed;
+bottom:-20px;
+animation:float 6s linear infinite;
 }
 
 @keyframes float{
-    from{
-        transform:translateY(0);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-120vh);
-        opacity:0;
-    }
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
 }
 
 @media(max-width:768px){
-    h1{
-        font-size:2.3rem;
-    }
 
-    .gallery-grid img{
-        height:220px;
-    }
+.hero h1{
+font-size:2.4rem;
+}
+
+.slide{
+max-height:350px;
+}
+
 }
 </style>
 </head>
@@ -164,51 +166,90 @@ button:hover{
 
 <div class="container">
 
+<div class="hero">
 <h1>🎉 Happy Birthday Nilofur 🎉</h1>
-
-<p class="nickname">My Dear Machan 💜</p>
+<p>To Someone Truly Special 💜</p>
+</div>
 
 <div class="card">
 
-<p class="message">
-Happy Birthday to the most amazing friend! 💜<br><br>
+<div class="slideshow">
+<img class="slide fade" src="nil.jpegg">
+<img class="slide fade" src="nill.jpeg">
+<img class="slide fade" src="nilll.jpeg">
+<img class="slide fade" src="nillll.jpeg">
+</div>
 
-Dear Nilofur,
+<div class="letter">
 
-Thank you for being such an important part of my life.
+<h2>💜 A Special Message 💜</h2>
 
-From our first day in college to all the unforgettable memories we've shared, every moment has been special.
+<br>
 
-Whether it was spending time at the roadu kadai, talking for hours on late-night calls, or simply being there for each other, you've made life brighter.
-
-May this year bring you happiness, success, laughter and endless beautiful memories.
-
-Enjoy your special day Machan! ✨🎂💜
+<p>
+Some people enter our lives and quietly make everything better.
+You are one of those rare people.
 </p>
 
-<div class="gallery">
-<h2>📸 Beautiful Memories 📸</h2>
-
-<div class="gallery-grid">
-<img src="nil.jpeg" alt="Photo 1">
-<img src="nill.jpeg" alt="Photo 2">
-<img src="nilll.jpeg" alt="Photo 3">
-<img src="nillll.jpeg" alt="Photo 4">
-</div>
+<div class="quote">
+"Some souls bring light wherever they go."
 </div>
 
-<div class="memories">
-<h2>💜 Our Favorite Memories 💜</h2>
+<p>
+Your kindness, strength, and beautiful heart make you truly unforgettable.
+The memories we've shared will always hold a special place in my life.
+</p>
 
-<div class="memory">🎓 First Day of College</div>
-<div class="memory">🏫 College Days</div>
-<div class="memory">🍜 Roadu Kadai Moments</div>
-<div class="memory">📞 Late Night Calls</div>
+<div class="quote">
+"Friendship is not measured by time, but by the moments that become memories."
+</div>
+
+<p>
+On your birthday, I hope you are surrounded by happiness,
+filled with confidence, and blessed with endless opportunities.
+</p>
+
+<p>
+May every dream you carry in your heart find its way into reality.
+May every challenge become a stepping stone toward success.
+</p>
+
+<div class="quote">
+"The best chapters of your story are still waiting to be written."
+</div>
+
+<p>
+Thank you for being the wonderful person you are.
+The world is a better place because you're in it.
+</p>
+
+<br>
+
+<h2>
+💜 Happy Birthday Nilofur 💜
+</h2>
+
+<p>
+May this year bring peace, joy, success, and countless reasons to smile.
+✨🎂✨
+</p>
 
 </div>
 
-<button onclick="showWish()">
-🎁 Click For Surprise
+<div class="memory">
+
+<h2>📸 Beautiful Memories</h2>
+
+<p>
+Every photo tells a story.
+Every memory carries a smile.
+And every moment reminds us how valuable true friendship can be.
+</p>
+
+</div>
+
+<button onclick="wish()">
+🎁 Open Birthday Wish
 </button>
 
 </div>
@@ -221,10 +262,38 @@ Made With 💜 By Surya
 
 <script>
 
-function showWish(){
+function wish(){
+
 alert(
-"🎂 Happy Birthday Nilofur 💜\n\nMay all your dreams come true.\nHave an amazing year ahead! ✨"
+"💜 Happy Birthday Nilofur 💜\n\nMay happiness follow you wherever you go.\nMay success find you in everything you do.\nAnd may every day ahead be filled with beautiful moments.\n\nYou deserve the very best. ✨🎂"
 );
+
+}
+
+let slideIndex=0;
+
+showSlides();
+
+function showSlides(){
+
+let i;
+
+let slides=document.getElementsByClassName("slide");
+
+for(i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+slideIndex++;
+
+if(slideIndex>slides.length){
+slideIndex=1;
+}
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(showSlides,3000);
+
 }
 
 function createHeart(){
@@ -253,3 +322,4 @@ setInterval(createHeart,300);
 
 </body>
 </html>
+```
