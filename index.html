@@ -118,6 +118,38 @@ button:hover{
     }
 }
 </style>
+    .memory:hover{
+    transform:scale(1.05);
+}
+
+/* GALLERY CSS START */
+.gallery{
+    margin-top:30px;
+}
+
+.gallery h2{
+    margin-bottom:20px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+/* GALLERY CSS END */
 </head>
 
 <body>
@@ -131,6 +163,27 @@ button:hover{
 
 <p class="message">
 Happy Birthday to the most amazing friend! 💜<br><br>
+    <div class="card">
+
+<p class="message">
+Happy Birthday to the most amazing friend...
+</p>
+
+<!-- PHOTO GALLERY START -->
+<div class="gallery">
+    <h2>📸 Beautiful Memories 📸</h2>
+
+    <div class="gallery-grid">
+        <img src="photo1.jpg" alt="Nilofur">
+        <img src="photo2.jpg" alt="Nilofur">
+        <img src="photo3.jpg" alt="Nilofur">
+        <img src="photo4.jpg" alt="Nilofur">
+    </div>
+</div>
+<!-- PHOTO GALLERY END -->
+
+<div class="memories">
+    <h2>💜 Our Favorite Memories 💜</h2>
 
 Dear Nilofur,<br><br>
 
