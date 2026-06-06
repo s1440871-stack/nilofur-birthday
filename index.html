@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Nilofur 🎂</title>
+<title>Happy Birthday Nilofur 💜</title>
 
 <style>
 *{
@@ -14,117 +14,58 @@
 }
 
 body{
-    background:linear-gradient(135deg,#5e2b97,#8a4fff,#c084fc);
+    background:linear-gradient(135deg,#5b21b6,#7c3aed,#c084fc);
+    color:white;
     min-height:100vh;
     overflow-x:hidden;
-    color:white;
 }
 
 .container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
     text-align:center;
-    padding:50px 20px;
 }
 
 h1{
-    font-size:4rem;
+    font-size:3.5rem;
+    margin-bottom:10px;
     animation:glow 2s infinite alternate;
+}
+
+.nickname{
+    font-size:1.5rem;
+    color:#f3e8ff;
+    margin-bottom:25px;
 }
 
 @keyframes glow{
     from{
-        text-shadow:0 0 10px #fff;
+        text-shadow:0 0 10px white;
     }
     to{
-        text-shadow:0 0 30px #fff,0 0 50px #d8b4fe;
+        text-shadow:0 0 25px white,0 0 40px #d8b4fe;
     }
-}
-
-.nickname{
-    font-size:1.8rem;
-    margin-top:10px;
-    color:#f5d0fe;
 }
 
 .card{
-    max-width:850px;
-    margin:40px auto;
     background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(12px);
-    border-radius:25px;
+    backdrop-filter:blur(10px);
     padding:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    border-radius:25px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.3);
 }
 
 .message{
-    font-size:1.3rem;
+    font-size:1.2rem;
     line-height:1.8;
 }
 
-.memories{
-    margin-top:30px;
-}
+/* Gallery */
 
-.memories h2{
-    margin-bottom:15px;
-}
-
-.memory{
-    background:rgba(255,255,255,0.15);
-    margin:10px;
-    padding:15px;
-    border-radius:15px;
-    transition:0.4s;
-}
-
-.memory:hover{
-    transform:scale(1.05);
-}
-
-.footer{
-    margin-top:40px;
-    font-size:1.5rem;
-}
-
-button{
-    margin-top:30px;
-    padding:15px 35px;
-    border:none;
-    border-radius:50px;
-    font-size:1rem;
-    cursor:pointer;
-    background:white;
-    color:#7c3aed;
-    font-weight:bold;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-
-.heart{
-    position:fixed;
-    color:#fff;
-    animation:float 6s linear infinite;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-100px);
-        opacity:0;
-    }
-}
-</style>
-    .memory:hover{
-    transform:scale(1.05);
-}
-
-/* GALLERY CSS START */
 .gallery{
-    margin-top:30px;
+    margin-top:40px;
 }
 
 .gallery h2{
@@ -133,13 +74,13 @@ button:hover{
 
 .gallery-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap:15px;
 }
 
 .gallery-grid img{
     width:100%;
-    height:250px;
+    height:280px;
     object-fit:cover;
     border-radius:15px;
     transition:0.4s;
@@ -149,7 +90,74 @@ button:hover{
 .gallery-grid img:hover{
     transform:scale(1.05);
 }
-/* GALLERY CSS END */
+
+/* Memories */
+
+.memories{
+    margin-top:40px;
+}
+
+.memory{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+    margin:10px 0;
+    transition:0.3s;
+}
+
+.memory:hover{
+    transform:translateY(-5px);
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    background:white;
+    color:#7c3aed;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:30px;
+    font-size:1.3rem;
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    animation:float 6s linear infinite;
+    z-index:999;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+@media(max-width:768px){
+    h1{
+        font-size:2.3rem;
+    }
+
+    .gallery-grid img{
+        height:220px;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -157,52 +165,37 @@ button:hover{
 <div class="container">
 
 <h1>🎉 Happy Birthday Nilofur 🎉</h1>
+
 <p class="nickname">My Dear Machan 💜</p>
 
 <div class="card">
 
 <p class="message">
 Happy Birthday to the most amazing friend! 💜<br><br>
-    <div class="card">
 
-<p class="message">
-Happy Birthday to the most amazing friend...
-</p>
-
-<!-- PHOTO GALLERY START -->
-<div class="gallery">
-    <h2>📸 Beautiful Memories 📸</h2>
-
-    <div class="gallery-grid">
-        <img src="photo1.jpg" alt="Nilofur">
-        <img src="photo2.jpg" alt="Nilofur">
-        <img src="photo3.jpg" alt="Nilofur">
-        <img src="photo4.jpg" alt="Nilofur">
-    </div>
-</div>
-<!-- PHOTO GALLERY END -->
-
-<div class="memories">
-    <h2>💜 Our Favorite Memories 💜</h2>
-
-Dear Nilofur,<br><br>
+Dear Nilofur,
 
 Thank you for being such an important part of my life.
-From our very first day in college to all the unforgettable memories we've shared,
-every moment has been special.
 
-Whether it was spending time at the roadu kadai,
-talking for hours on late-night calls,
-or simply being there for each other,
-you've made life brighter and happier.
+From our first day in college to all the unforgettable memories we've shared, every moment has been special.
 
-May this year bring you endless happiness,
-success, good health, and everything you've been wishing for.
+Whether it was spending time at the roadu kadai, talking for hours on late-night calls, or simply being there for each other, you've made life brighter.
 
-Keep smiling, keep shining, and keep being the wonderful person you are.
+May this year bring you happiness, success, laughter and endless beautiful memories.
 
-✨ Enjoy your special day, Machan! ✨
+Enjoy your special day Machan! ✨🎂💜
 </p>
+
+<div class="gallery">
+<h2>📸 Beautiful Memories 📸</h2>
+
+<div class="gallery-grid">
+<img src="photo1.jpg" alt="Photo 1">
+<img src="photo2.jpg" alt="Photo 2">
+<img src="photo3.jpg" alt="Photo 3">
+<img src="photo4.jpg" alt="Photo 4">
+</div>
+</div>
 
 <div class="memories">
 <h2>💜 Our Favorite Memories 💜</h2>
@@ -210,39 +203,52 @@ Keep smiling, keep shining, and keep being the wonderful person you are.
 <div class="memory">🎓 First Day of College</div>
 <div class="memory">🏫 College Days</div>
 <div class="memory">🍜 Roadu Kadai Moments</div>
-<div class="memory">📞 Late-Night Calls</div>
+<div class="memory">📞 Late Night Calls</div>
 
 </div>
 
-<button onclick="showWish()">Click for a Surprise 🎁</button>
+<button onclick="showWish()">
+🎁 Click For Surprise
+</button>
 
 </div>
 
 <div class="footer">
-Made with 💜 by Surya
+Made With 💜 By Surya
 </div>
 
 </div>
 
 <script>
+
 function showWish(){
-    alert("🎂 Happy Birthday Nilofur! 💜\nYou are truly one of a kind. Have an amazing year ahead! ✨");
+alert(
+"🎂 Happy Birthday Nilofur 💜\n\nMay all your dreams come true.\nHave an amazing year ahead! ✨"
+);
 }
 
 function createHeart(){
-    const heart=document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerHTML='💜';
-    heart.style.left=Math.random()*100+'vw';
-    heart.style.fontSize=(Math.random()*25+15)+'px';
-    document.body.appendChild(heart);
 
-    setTimeout(()=>{
-        heart.remove();
-    },6000);
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="💜";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
 }
 
 setInterval(createHeart,300);
+
 </script>
 
 </body>
